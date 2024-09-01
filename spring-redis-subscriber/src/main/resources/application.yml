@@ -1,0 +1,24 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: Redis Subscriber
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/lock
+    username: admin
+    password: 123456
+  jpa:
+    generate-ddl: true
+    properties:
+      dialect: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+
+app:
+  name: subscriber-one
+  redis:
+    host: redis://127.0.0.1:6379

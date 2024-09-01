@@ -1,0 +1,6 @@
+server:
+  port: 8000
+
+app:
+  redis:
+    host: redis://127.0.0.1:6379
